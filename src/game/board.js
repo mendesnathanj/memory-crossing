@@ -40,6 +40,10 @@ class Board {
   html() {
     const container = document.createElement('div');
     container.classList.add('board');
+    container.addEventListener('click', e => {
+      if (e.target.classList.contains('back-card'))
+        e.target.parentNode.parentNode.classList.add('rotate');
+    });
 
     this.tiles.forEach(row => {
       const newRow = document.createElement('div');
@@ -47,7 +51,7 @@ class Board {
       row.forEach(tile => newRow.appendChild(tile.html()));
       container.appendChild(newRow);
     })
-    // this.tiles.forEach(tile => container.appendChild(tile.html()));
+
 
     return container;
   }

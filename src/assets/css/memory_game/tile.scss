@@ -1,0 +1,51 @@
+.tile-container {
+  padding: 4px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.flip-box {
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 750ms;
+  transform-style: preserve-3d;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front > .tile {
+  background-color: #FAF2CF;
+  width: 100%;
+  height: auto;
+}
+
+.tile {
+  border-radius: 10px;
+  border: 2px solid #dfd298;
+}
+
+// .tile-5 {
+//   width: 20%;
+// }
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}

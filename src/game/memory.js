@@ -1,5 +1,5 @@
 import Board from './board';
-import LeafBg from '../assets/imgs/bgs/leaf-game.jpg';
+import $ from 'jquery';
 
 class Memory {
   constructor(root) {

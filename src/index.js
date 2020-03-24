@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const memory = new Memory(root);
 
   memory.start();
+
+
+    const img = document.querySelector('img');
+    console.log(img);
+    console.log(img.offsetHeight);
+
 });
 
 

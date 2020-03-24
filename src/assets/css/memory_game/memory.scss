@@ -1,0 +1,15 @@
+.memory-game {
+  height: 100vh;
+}
+
+.memory-game:after {
+  content: '';
+  background-image: url('../imgs/bgs/leaf-game.jpg');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
