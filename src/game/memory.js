@@ -1,15 +1,16 @@
 import Board from './board';
-
+import Header from './header';
 
 class Memory {
   constructor(root) {
     this.root = root;
-    this.board = new Board(5);
+    this.board = new Board(4);
   }
 
   render() {
     const container = document.createElement('div');
     container.classList.add('memory-game');
+    container.appendChild(new Header().html());
     container.appendChild(this.board.html());
     this.root.appendChild(container);
   }

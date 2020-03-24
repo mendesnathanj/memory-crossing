@@ -1,11 +1,18 @@
-.memory-game {
+body {
   height: 100vh;
+  overflow: hidden;
+}
+
+.memory-game {
+
 }
 
 .memory-game:after {
   content: '';
   background-image: url('../imgs/bgs/leaf-game.jpg');
-  opacity: 0.4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.75;
   top: 0;
   left: 0;
   bottom: 0;
