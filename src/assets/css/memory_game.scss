@@ -1,0 +1,46 @@
+.memory-game {
+  height: 100vh;
+  // background-image: url('../imgs/bgs/leaf-game.jpg');
+}
+
+.memory-game:after {
+  content: '';
+  background-image: url('../imgs/bgs/leaf-game.jpg');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tile-container {
+  padding: 4px;
+  max-width: 125px;
+}
+
+.tile {
+  border-radius: 10px;
+  border: 2px solid #dfd298;
+}
+
+.tile-5 {
+  width: 20%;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}

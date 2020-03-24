@@ -1,9 +1,15 @@
 import './assets/css/_memory_crossing.scss';
+import Memory from './game/memory';
 
-function component() {
-  const el = document.createElement('div');
-  el.innerHTML = 'hewwo world';
-  return el;
-}
 
-document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('#root');
+
+  const memory = new Memory(root);
+
+  memory.start();
+});
+
+
+
+// document.body.appendChild(component());

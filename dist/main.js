@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Montserrat:800&display=swap);\"]);\n// Module\nexports.push([module.i, \"html, body, div, span, applet, object, iframe,\\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\\na, abbr, acronym, address, big, cite, code,\\ndel, dfn, em, img, ins, kbd, q, s, samp,\\nsmall, strike, strong, sub, sup, tt, var,\\nb, u, i, center,\\ndl, dt, dd, ol, ul, li,\\nfieldset, form, label, legend,\\ntable, caption, tbody, tfoot, thead, tr, th, td,\\narticle, aside, canvas, details, embed,\\nfigure, figcaption, footer, header, hgroup,\\nmenu, nav, output, ruby, section, summary,\\ntime, mark, audio, video {\\n  margin: 0;\\n  padding: 0;\\n  border: 0;\\n  font-size: 100%;\\n  font: inherit;\\n  vertical-align: baseline; }\\n\\narticle, aside, details, figcaption, figure,\\nfooter, header, hgroup, menu, nav, section {\\n  display: block; }\\n\\nbody {\\n  line-height: 1; }\\n\\nol, ul {\\n  list-style: none; }\\n\\nblockquote, q {\\n  quotes: none; }\\n\\nblockquote:before, blockquote:after,\\nq:before, q:after {\\n  content: '';\\n  content: none; }\\n\\ntable {\\n  border-collapse: collapse;\\n  border-spacing: 0; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/assets/css/_memory_crossing.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../imgs/bgs/leaf-game.jpg */ \"./src/assets/imgs/bgs/leaf-game.jpg\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Montserrat:800&display=swap);\"]);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\n// Module\nexports.push([module.i, \"*, *:before, *:after {\\n  box-sizing: border-box; }\\n\\nhtml, body, div, span, applet, object, iframe,\\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\\na, abbr, acronym, address, big, cite, code,\\ndel, dfn, em, img, ins, kbd, q, s, samp,\\nsmall, strike, strong, sub, sup, tt, var,\\nb, u, i, center,\\ndl, dt, dd, ol, ul, li,\\nfieldset, form, label, legend,\\ntable, caption, tbody, tfoot, thead, tr, th, td,\\narticle, aside, canvas, details, embed,\\nfigure, figcaption, footer, header, hgroup,\\nmenu, nav, output, ruby, section, summary,\\ntime, mark, audio, video {\\n  margin: 0;\\n  padding: 0;\\n  border: 0;\\n  font-size: 100%;\\n  font: inherit;\\n  vertical-align: baseline; }\\n\\narticle, aside, details, figcaption, figure,\\nfooter, header, hgroup, menu, nav, section {\\n  display: block; }\\n\\nbody {\\n  line-height: 1; }\\n\\nol, ul {\\n  list-style: none; }\\n\\nblockquote, q {\\n  quotes: none; }\\n\\nblockquote:before, blockquote:after,\\nq:before, q:after {\\n  content: '';\\n  content: none; }\\n\\ntable {\\n  border-collapse: collapse;\\n  border-spacing: 0; }\\n\\n.memory-game {\\n  height: 100vh; }\\n\\n.memory-game:after {\\n  content: '';\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n  opacity: 0.4;\\n  top: 0;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  position: absolute;\\n  z-index: -1; }\\n\\n.board {\\n  display: flex;\\n  flex-wrap: wrap; }\\n\\n.board-row {\\n  width: 100%;\\n  display: flex;\\n  justify-content: center; }\\n\\n.tile-container {\\n  padding: 4px;\\n  max-width: 125px; }\\n\\n.tile {\\n  border-radius: 10px;\\n  border: 2px solid #dfd298; }\\n\\n.tile-5 {\\n  width: 20%; }\\n\\n.responsive-img {\\n  width: 100%;\\n  height: auto; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/assets/css/_memory_crossing.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -106,6 +106,18 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = url && url.__esModule ? url.default : url;\n\n  if (typeof url !== 'string') {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, '\\\\n'), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -132,6 +144,66 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 
 /***/ }),
 
+/***/ "./src/assets/imgs/bgs/leaf-game.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/imgs/bgs/leaf-game.jpg ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"ff8fe2371e37a744c7f6d7969c4ba6e7.jpg\");\n\n//# sourceURL=webpack:///./src/assets/imgs/bgs/leaf-game.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/imgs/kk-slider-og.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/imgs/kk-slider-og.jpg ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e089c5644a36235d83853290b9a8b92a.jpg\");\n\n//# sourceURL=webpack:///./src/assets/imgs/kk-slider-og.jpg?");
+
+/***/ }),
+
+/***/ "./src/game/board.js":
+/*!***************************!*\
+  !*** ./src/game/board.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tile */ \"./src/game/tile.js\");\n/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/utils */ \"./src/utils/utils.js\");\n\n\n\nclass Board {\n  constructor(size) {\n    this.size = size;\n\n\n    this.tiles = this.newTileset(size);\n  }\n\n  newTileset(size) {\n    const temp = [];\n\n    for (let i = 0; i < (size * size) / 2; i++) {\n      const color = Object(_utils_utils__WEBPACK_IMPORTED_MODULE_1__[\"randomColor\"])();\n      const tile = new _tile__WEBPACK_IMPORTED_MODULE_0__[\"default\"](i, color, size);\n      temp.push(tile);\n      temp.push(tile);\n    }\n\n    Object(_utils_utils__WEBPACK_IMPORTED_MODULE_1__[\"shuffle\"])(temp);\n\n    const tiles = [];\n    let idx = 0;\n    for (let i = 0; i < size; i++) {\n      const row = [];\n\n      for (let j = 0; j < size; j++) {\n        row.push(temp[idx]);\n        idx++;\n      }\n\n      tiles.push(row);\n    }\n\n    return tiles;\n  }\n\n  html() {\n    const container = document.createElement('div');\n    container.classList.add('board');\n\n    this.tiles.forEach(row => {\n      const newRow = document.createElement('div');\n      newRow.classList.add('board-row');\n      row.forEach(tile => newRow.appendChild(tile.html()));\n      container.appendChild(newRow);\n    })\n    // this.tiles.forEach(tile => container.appendChild(tile.html()));\n\n    return container;\n  }\n\n  render() {\n\n  }\n}\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Board);\n\n\n//# sourceURL=webpack:///./src/game/board.js?");
+
+/***/ }),
+
+/***/ "./src/game/memory.js":
+/*!****************************!*\
+  !*** ./src/game/memory.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./board */ \"./src/game/board.js\");\n/* harmony import */ var _assets_imgs_bgs_leaf_game_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/imgs/bgs/leaf-game.jpg */ \"./src/assets/imgs/bgs/leaf-game.jpg\");\n\n\n\nclass Memory {\n  constructor(root) {\n    this.root = root;\n    this.board = new _board__WEBPACK_IMPORTED_MODULE_0__[\"default\"](5);\n  }\n\n  render() {\n    const container = document.createElement('div');\n    container.classList.add('memory-game');\n    container.appendChild(this.board.html());\n    this.root.appendChild(container);\n  }\n\n  start() {\n    console.log('starting new game');\n    this.render();\n  }\n}\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Memory);\n\n\n//# sourceURL=webpack:///./src/game/memory.js?");
+
+/***/ }),
+
+/***/ "./src/game/tile.js":
+/*!**************************!*\
+  !*** ./src/game/tile.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_imgs_kk_slider_og_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/imgs/kk-slider-og.jpg */ \"./src/assets/imgs/kk-slider-og.jpg\");\n\n\nclass Tile {\n  constructor(value, color, size) {\n    this.value = value;\n    this.color = color;\n    this.size = size;\n  }\n\n  html() {\n    const container = document.createElement('div');\n    container.classList.add('tile-container');\n    container.classList.add(`tile-${this.size}`);\n\n    // const tile = document.createElement('div');\n    // tile.classList.add('tile');\n\n    const leaf = new Image();\n    leaf.src = _assets_imgs_kk_slider_og_jpg__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    leaf.classList.add('responsive-img');\n    leaf.classList.add('tile');\n\n    container.appendChild(leaf);\n\n    // container.appendChild(tile);\n\n    return container;\n  }\n\n  render() {\n\n  }\n}\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Tile);\n\n\n//# sourceURL=webpack:///./src/game/tile.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -140,7 +212,19 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/css/_memory_crossing.scss */ \"./src/assets/css/_memory_crossing.scss\");\n/* harmony import */ var _assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction component() {\n  const el = document.createElement('div');\n  el.innerHTML = 'hewwo world';\n  return el;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/css/_memory_crossing.scss */ \"./src/assets/css/_memory_crossing.scss\");\n/* harmony import */ var _assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_css_memory_crossing_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _game_memory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game/memory */ \"./src/game/memory.js\");\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const root = document.querySelector('#root');\n\n  const memory = new _game_memory__WEBPACK_IMPORTED_MODULE_1__[\"default\"](root);\n\n  memory.start();\n});\n\n\n\n// document.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/utils/utils.js":
+/*!****************************!*\
+  !*** ./src/utils/utils.js ***!
+  \****************************/
+/*! exports provided: shuffle, randomColor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"shuffle\", function() { return shuffle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"randomColor\", function() { return randomColor; });\nconst shuffle = arr => {\n  let currentIndex = arr.length;\n  let tempVal, randIndex;\n\n  while (0 !== currentIndex) {\n    randIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    tempVal = arr[currentIndex];\n    arr[currentIndex] = arr[randIndex];\n    arr[randIndex] = tempVal;\n  }\n\n  return arr;\n}\n\nconst randomColor = () => (\n  '#' + Math.floor(Math.random() * 16777215).toString(16)\n);\n\n\n//# sourceURL=webpack:///./src/utils/utils.js?");
 
 /***/ })
 
