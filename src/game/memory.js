@@ -1,5 +1,5 @@
 import Board from './board';
-import $ from 'jquery';
+
 
 class Memory {
   constructor(root) {
