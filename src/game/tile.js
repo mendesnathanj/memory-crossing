@@ -1,18 +1,10 @@
-import { importAll } from '../utils/utils';
 import Leaf from '../assets/imgs/leaf2.png';
 
-const images = importAll(
-  require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
-);
-
-console.log(images);
-
 class Tile {
-  constructor(value, color, size) {
+  constructor({ name, src }) {
 
-    this.value = value;
-    this.color = color;
-    this.size = size;
+    this.name = name;
+    this.src = src;
   }
 
   html() {
@@ -28,7 +20,7 @@ class Tile {
     img.classList.add('responsive-img');
     img.classList.add('tile-img');
     img.src = Leaf;
-    img.setAttribute('data-villager', images['kk-slider-og.jpg'].default);
+    img.setAttribute('data-villager', this.src);
 
     tile.appendChild(img);
     container.appendChild(tile);

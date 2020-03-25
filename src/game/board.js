@@ -1,5 +1,13 @@
 import Tile from './tile';
-import { shuffle, randomColor } from '../utils/utils';
+import { importAll } from "../utils/utils";
+import { shuffle, randomVillager } from '../utils/utils';
+
+const images = importAll(
+  require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
+);
+
+window.images = images;
+window.randomVillager = randomVillager;
 
 class Board {
   constructor(size) {
@@ -11,10 +19,12 @@ class Board {
 
   newTileset(size) {
     const temp = [];
+    const villagers = Object.assign({}, images);
 
     for (let i = 0; i < (size * size) / 2; i++) {
-      const color = randomColor();
-      const tile = new Tile(i, color, size);
+      const villager = randomVillager(villagers);
+      delete villagers[villager.key];
+      const tile = new Tile(villager);
       temp.push(tile);
       temp.push(tile);
     }
@@ -42,8 +52,10 @@ class Board {
     container.classList.add('board');
     container.addEventListener('click', ({ target }) => {
       if (!target.classList.contains('tile-img')) return;
+      if (target.classList.contains('flipped')) return;
 
       target.classList.toggle("scale");
+      target.classList.toggle("flipped");
       target.src = target.getAttribute('data-villager');
       setTimeout(() => target.classList.toggle("scale"), 200);
     });

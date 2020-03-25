@@ -25,3 +25,13 @@ export const importAll = r => {
   });
   return images;
 }
+
+export const randomVillager = villagers => {
+  const keys = Object.keys(villagers);
+  const i = Math.round(keys.length * Math.random());
+  const key = keys[i];
+  const name = key.split('.')[0];
+  const src = villagers[keys[i]].default;
+
+  return { name, src, key };
+}
