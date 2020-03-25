@@ -1,49 +1,41 @@
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
 .tile-container {
+  position: relative;
   padding: 4px;
-  width: 100px;
-  height: 100px;
+  max-width: 125px;
   cursor: pointer;
 }
 
-.flip-box {
-  perspective: 1000px;
-}
-
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  transition: transform 750ms;
-  transform-style: preserve-3d;
-}
-
-.rotate {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-back {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front > .tile {
-  background-color: #FAF2CF;
-  width: 100%;
-  height: auto;
-}
-
 .tile {
-  border-radius: 10px;
-  border: 2px solid #dfd298;
+  height: 100%;
 }
 
-// .tile-5 {
-//   width: 20%;
-// }
+.scale {
+  transform: scale(1.1);
+}
+
+.tile-img {
+  border-radius: 10px;
+  border: 2px solid #DFD298;
+  transition: all 250ms ease-in-out;
+}
+
+.tile-bg {
+  content: url('../imgs/leaf2.png');
+}
+
+.kk-slider {
+  content: url('../imgs/kk-slider-og.jpg');
+}
 
 .responsive-img {
   width: 100%;
