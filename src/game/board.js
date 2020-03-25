@@ -6,9 +6,6 @@ const images = importAll(
   require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
 );
 
-window.images = images;
-window.randomVillager = randomVillager;
-
 class Board {
   constructor(size) {
     this.size = size;
