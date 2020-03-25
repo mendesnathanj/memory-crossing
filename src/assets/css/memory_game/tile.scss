@@ -20,21 +20,13 @@
 }
 
 .scale {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .tile-img {
   border-radius: 10px;
   border: 2px solid #DFD298;
-  transition: all 250ms ease-in-out;
-}
-
-.tile-bg {
-  content: url('../imgs/leaf2.png');
-}
-
-.kk-slider {
-  content: url('../imgs/kk-slider-og.jpg');
+  transition: all 200ms ease-in-out;
 }
 
 .responsive-img {

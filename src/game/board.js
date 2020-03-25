@@ -40,9 +40,13 @@ class Board {
   html() {
     const container = document.createElement('div');
     container.classList.add('board');
-    // container.addEventListener('click', e => {
-    //   console.log(e.target);
-    // });
+    container.addEventListener('click', ({ target }) => {
+      if (!target.classList.contains('tile-img')) return;
+
+      target.classList.toggle("scale");
+      target.src = target.getAttribute('data-villager');
+      setTimeout(() => target.classList.toggle("scale"), 200);
+    });
 
     this.tiles.forEach(row => {
       const newRow = document.createElement('div');
