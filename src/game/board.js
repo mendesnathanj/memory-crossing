@@ -80,8 +80,8 @@ class Board {
           this.tilesThisTurn = [];
         } else {
           setTimeout(() => {
-            this.tilesThisTurn.forEach(tile => this.shake(tile));
           }, 300);
+          this.tilesThisTurn.forEach(tile => this.shake(tile));
 
           setTimeout(() => {
             this.tilesThisTurn.forEach(tile => {
@@ -89,7 +89,7 @@ class Board {
               tile.classList.toggle("flipped");
             });
             this.tilesThisTurn = [];
-          }, 1000);
+          }, 750);
         }
       }
     });
