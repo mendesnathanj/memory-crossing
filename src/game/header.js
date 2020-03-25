@@ -12,8 +12,13 @@ class Header {
     img.src = Bg;
     img.classList.add('responsive-img');
 
-    container.appendChild(img);
 
+    const content = document.createElement('div');
+    content.classList.add('header-content');
+
+    
+    container.appendChild(img);
+    container.appendChild(content);
     return container;
   }
 }

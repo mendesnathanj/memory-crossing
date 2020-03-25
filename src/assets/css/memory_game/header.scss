@@ -1,5 +1,13 @@
 .header {
-  width: 80%;
-  margin: 0px auto 100px;
-  padding-top: 25px;
+  position: relative;
+  width: 90%;
+  margin: 25px auto 100px;
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
