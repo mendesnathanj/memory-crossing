@@ -5,6 +5,7 @@ class Tile {
 
     this.name = name;
     this.src = src;
+    this.found = false;
   }
 
   html() {
@@ -20,10 +21,11 @@ class Tile {
     img.classList.add('responsive-img');
     img.classList.add('tile-img');
     img.src = Leaf;
-    img.setAttribute('data-villager', this.src);
-
+    img.setAttribute('data-villager-src', this.src);
+    img.setAttribute('data-villager-name', this.name);
     tile.appendChild(img);
     container.appendChild(tile);
+
 
     return container;
   }
