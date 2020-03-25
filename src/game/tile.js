@@ -1,4 +1,4 @@
-import Leaf from '../assets/imgs/leaf2.png';
+import CardBg from '../assets/imgs/card-facedown.png';
 
 class Tile {
   constructor({ name, src }) {
@@ -20,7 +20,7 @@ class Tile {
     const img = new Image();
     img.classList.add('responsive-img');
     img.classList.add('tile-img');
-    img.src = Leaf;
+    img.src = CardBg;
     img.setAttribute('data-villager-src', this.src);
     img.setAttribute('data-villager-name', this.name);
     tile.appendChild(img);
