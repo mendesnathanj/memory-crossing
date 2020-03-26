@@ -4,7 +4,7 @@ import Header from './header';
 class Memory {
   constructor(root) {
     this.root = root;
-    this.board = new Board(4);
+    this.board = new Board(32);
   }
 
   render() {

@@ -1,51 +1,65 @@
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.board-row > .tile-container {
+  max-width: 110px;
+}
+
 .tile-container {
+  position: relative;
   padding: 4px;
-  width: 125px;
-  height: 125px;
+  max-width: 125px;
+  flex: 1 0 12.5%;
   cursor: pointer;
 }
 
-.flip-box {
-  perspective: 1000px;
-}
-
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  transition: transform 750ms;
-  transform-style: preserve-3d;
-}
-
-.rotate {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-back {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front > .tile {
-  background-color: #FAF2CF;
-  width: 100%;
-  height: auto;
-}
-
 .tile {
-  border-radius: 10px;
-  border: 2px solid #dfd298;
+  height: 100%;
 }
 
-// .tile-5 {
-//   width: 20%;
-// }
+.scale {
+  transform: scale(1.05);
+}
+
+.tile-img {
+  border-radius: 10px;
+  border: 2px solid #6EC8BC;
+  transition: all 200ms ease-in-out;
+}
 
 .responsive-img {
   width: 100%;
   height: auto;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.shake {
+  animation: shake 500ms cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
