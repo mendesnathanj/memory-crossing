@@ -4,7 +4,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname)
   },
   module: {
     rules: [
@@ -14,7 +14,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif|mp3|ico)$/,
-        use: ["file-loader"]
+        loader: "file-loader",
+        options: {
+          outputPath: 'assets'
+        }
       }
     ]
   }
