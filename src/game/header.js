@@ -13,7 +13,6 @@ class Header {
     this.streakHtml = null;
     this.initialTime = initialTime;
     this.bgMusic = new Audio(BGMusic);
-    this.bgMusic.autoplay = true;
     this.title = 'Memory Crossing!';
   }
 
@@ -83,10 +82,16 @@ class Header {
     const musicIcon = createElementFromHTML('<i class="header-music fas fa-microphone-alt-slash"></i>');
 
     musicIcon.addEventListener('click', () => {
+
       musicIcon.classList.toggle('fa-microphone-alt-slash');
       musicIcon.classList.toggle('fa-microphone-alt');
-      if (this.bgMusic.paused) this.bgMusic.play()
-      else this.bgMusic.pause();
+      if (this.bgMusic.paused) {
+        this.bgMusic.play();
+        this.bgMusic.autoplay = true;
+      } else {
+        this.bgMusic.pause();
+        this.bgMusic.autoplay = false;
+      }
     });
 
     helpContainer.appendChild(musicIcon);
