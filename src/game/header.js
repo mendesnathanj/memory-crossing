@@ -13,6 +13,7 @@ class Header {
     this.streakHtml = null;
     this.initialTime = initialTime;
     this.bgMusic = new Audio(BGMusic);
+    this.bgMusic.autoplay = true;
     this.title = 'Memory Crossing!';
   }
 
