@@ -1,23 +1,19 @@
 import Board from './board';
-import Header from './header';
 
 class Memory {
-  constructor(root) {
-    this.root = root;
-    this.board = new Board(32);
+  constructor(levelNum, levelData, gameManager, score = 0) {
+    this.level = levelNum;
+    this.gameManager = gameManager;
+    this.board = new Board(levelNum, levelData.tileNum, levelData.time, gameManager, score);
   }
 
-  render() {
-    const container = document.createElement('div');
-    container.classList.add('memory-game');
-    container.appendChild(new Header().html());
+  html() {
+    const container = document.createElement("div");
+    container.id = 'memory-game';
+    container.classList.add("memory-game");
     container.appendChild(this.board.html());
-    this.root.appendChild(container);
-  }
 
-  start() {
-    console.log('starting new game');
-    this.render();
+    return container;
   }
 }
 

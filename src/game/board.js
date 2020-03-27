@@ -1,18 +1,28 @@
 import Tile from './tile';
-import { importAll } from "../utils/utils";
-import { shuffle, randomVillager } from '../utils/utils';
+import { shuffle, randomVillager, formattedTime } from '../utils/utils';
 import CardBg from "../assets/imgs/card-facedown.png";
+import { importAll } from "../utils/utils";
+import SuccessSound from '../assets/sounds/success.mp3';
 
 const images = importAll(
   require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
 );
 
 class Board {
-  constructor(size) {
-    this.size = size;
+  constructor(levelNum, tileNum, time, gameManager, score = 0) {
+    this.size = tileNum;
     this.tilesThisTurn = [];
-    this.score = 0;
-    this.tiles = this.newTileset(size);
+    this.score = score;
+    this.flippedCount = 0;
+    this.firstClick = true;
+    this.time = time;
+    this.streak = 0;
+    this.gameOver = false;
+    this.timerInterval = null;
+    this.levelNum = levelNum;
+    this.gameManager = gameManager;
+    this.successSound = new Audio(SuccessSound);
+    this.tiles = this.newTileset(tileNum);
   }
 
   newTileset(size) {
@@ -41,14 +51,38 @@ class Board {
     setTimeout(() => el.classList.toggle('shake'), 500);
   }
 
+  calculateScore() {
+    return this.score + 1000 + this.streak ** 10;
+  }
+
   html() {
     const container = document.createElement('div');
     container.classList.add('board');
 
     container.addEventListener('click', ({ target }) => {
+      if (this.gameOver) return;
       if (!target.classList.contains('tile-img')) return;
       if (target.classList.contains('flipped')) return;
       if (this.tilesThisTurn.length === 2) return;
+
+      if (this.firstClick) {
+        const timer = document.querySelector("#timer");
+        this.firstClick = false;
+        this.timerInterval = setInterval(() => {
+          this.time -= 1;
+          timer.innerText = formattedTime(this.time);
+
+          if (this.time === 0) {
+            timer.innerText = formattedTime(this.time);
+            this.gameManager.updateScore(0);
+            this.gameManager.resetStreak();
+            clearInterval(this.timerInterval);
+            console.log('You lose!');
+            this.gameOver = true;
+            this.gameManager.updateLevel(--this.levelNum);
+          }
+        }, 975)
+      }
 
       target.src = target.getAttribute("data-villager-src");
       this.scale(target);
@@ -58,13 +92,24 @@ class Board {
       if (this.tilesThisTurn.length === 2) {
         const names = this.tilesThisTurn.map(tile => tile.getAttribute('data-villager-name'));
         if (names[0] === names[1]) {
+
+          this.successSound.play();
           this.scale(this.tilesThisTurn[0]);
-          this.score += 100;
-          console.log(this.score);
+          this.streak++;
+          this.score = this.calculateScore();
+          this.gameManager.updateScore(this.score);
+          this.flippedCount += 2;
+          this.gameManager.updateStreak(this.streak);
+          if (this.flippedCount === this.size) {
+            console.log('You win!');
+            clearInterval(this.timerInterval);
+            setTimeout(() => this.gameManager.updateLevel(++this.levelNum, this.score), 1000);
+          }
           this.tilesThisTurn = [];
         } else {
           this.tilesThisTurn.forEach(tile => this.shake(tile));
-
+          this.streak = 0;
+          this.gameManager.resetStreak();
           setTimeout(() => {
             this.tilesThisTurn.forEach(tile => {
               tile.src = CardBg;

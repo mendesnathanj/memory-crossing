@@ -2,7 +2,6 @@ import CardBg from '../assets/imgs/card-facedown.png';
 
 class Tile {
   constructor({ name, src }) {
-
     this.name = name;
     this.src = src;
     this.found = false;

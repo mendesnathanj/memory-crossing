@@ -1,15 +1,9 @@
 import './assets/css/_memory_crossing.scss';
-import Memory from './game/memory';
+import GameManager from './game/game_manager';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('#root');
-
-  const memory = new Memory(root);
-
-  memory.start();
+  const gameManager = new GameManager(root);
+  gameManager.render();
 });
-
-
-
-// document.body.appendChild(component());
