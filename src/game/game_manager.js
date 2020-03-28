@@ -2,6 +2,7 @@ import Memory from './memory';
 import Header from './header';
 import { formattedTime } from '../utils/utils';
 import levelData from './level_data.js';
+import Modal from './modal';
 
 
 class GameManager {
@@ -49,6 +50,7 @@ class GameManager {
   }
 
   render() {
+    this.root.appendChild(new Modal().html());
     this.root.appendChild(this.header.html());
     this.root.appendChild(this.game.html());
   }

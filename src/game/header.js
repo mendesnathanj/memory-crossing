@@ -2,6 +2,7 @@ import Bg from '../assets/imgs/bgs/header2.png';
 import BellBag from '../assets/imgs/misc/bell-bag.png';
 import { formattedTime, formatNumber, createElementFromHTML } from '../utils/utils';
 import BGMusic from '../assets/sounds/background-music-edited.mp3';
+import Modal from './modal';
 
 class Header {
   constructor(level, initialTime, gameManager, score = 0) {
@@ -52,7 +53,6 @@ class Header {
   }
 
   html() {
-    // this.bgMusic.play();
     const container = document.createElement('div');
     container.classList.add('header');
 
@@ -94,6 +94,7 @@ class Header {
 
     const helpIcon = createElementFromHTML('<i class="header-question fas fa-question-circle"></i>');
     helpContainer.appendChild(helpIcon);
+    helpIcon.addEventListener('click', () => document.querySelector('#modal-container').classList.toggle('open'));
 
     upperRow.appendChild(helpContainer);
 
