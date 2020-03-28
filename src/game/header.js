@@ -83,9 +83,9 @@ class Header {
     const musicIcon = createElementFromHTML('<i class="header-music fas fa-microphone-alt-slash"></i>');
 
     musicIcon.addEventListener('click', () => {
-
       musicIcon.classList.toggle('fa-microphone-alt-slash');
       musicIcon.classList.toggle('fa-microphone-alt');
+
       if (this.bgMusic.paused) this.bgMusic.play();
       else this.bgMusic.pause();
     });
