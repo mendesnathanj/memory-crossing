@@ -13,6 +13,7 @@ class Header {
     this.streakHtml = null;
     this.initialTime = initialTime;
     this.bgMusic = new Audio(BGMusic);
+    this.bgMusic.loop = true;
     this.title = 'Memory Crossing!';
   }
 
@@ -85,13 +86,8 @@ class Header {
 
       musicIcon.classList.toggle('fa-microphone-alt-slash');
       musicIcon.classList.toggle('fa-microphone-alt');
-      if (this.bgMusic.paused) {
-        this.bgMusic.play();
-        this.bgMusic.autoplay = true;
-      } else {
-        this.bgMusic.pause();
-        this.bgMusic.autoplay = false;
-      }
+      if (this.bgMusic.paused) this.bgMusic.play();
+      else this.bgMusic.pause();
     });
 
     helpContainer.appendChild(musicIcon);

@@ -4,9 +4,14 @@ import CardBg from "../assets/imgs/card-facedown.png";
 import { importAll } from "../utils/utils";
 import SuccessSound from '../assets/sounds/success.mp3';
 
-const images = importAll(
+let images = importAll(
   require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
 );
+
+while (Object.keys(images).length === 0)
+  images = importAll(
+    require.context("../assets/imgs/villagers", false, /\.(png|jpe?g|svg)$/)
+  );
 
 class Board {
   constructor(levelNum, tileNum, time, gameManager, score = 0) {
