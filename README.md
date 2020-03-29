@@ -2,9 +2,10 @@
 
 ## What it is
 This is a small memory puzzle game that is themed off of the popular Animal Crossing video game series.
-Memory is a simple kids game that I grew up with so I'm quite fond of it. However, I wanted it to potentially
-appeal to people of all ages which is why I included a streak system that encourages a player to not begin flipping
-pairs over until they can recall where a large amount of cards are if they want to get the most points out of the game.
+
+Memory is a simple kids game that I grew up with so I'm quite fond of it.
+
+However, I wanted it to potentially appeal to people of all ages which is why I included a streak system that encourages a player to not begin flipping pairs over until they can recall where a large amount of cards are if they want to get the most points out of the game.
 
 
 ## Technology Stack
