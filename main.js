@@ -86,6 +86,8 @@
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
+=======
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/_memory_crossing.scss":
 /*!***************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/_memory_crossing.scss ***!
@@ -2266,11 +2268,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 
 /***/ }),
 
+>>>>>>> 62087907e3e8e6e8ab94d0a99b3f48ddf441dfe5
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /*! no exports provided */
+<<<<<<< HEAD
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed: Error: ENOENT: no such file or directory, open '/Users/nathanmendes/Documents/app_academy/jsp/memory-crossing/src/index.js'\");\n\n//# sourceURL=webpack:///./src/index.js?");
+=======
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2287,6 +2295,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"shuffle\", function() { return shuffle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"randomColor\", function() { return randomColor; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"importAll\", function() { return importAll; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"randomVillager\", function() { return randomVillager; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"formattedTime\", function() { return formattedTime; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"formatNumber\", function() { return formatNumber; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createElementFromHTML\", function() { return createElementFromHTML; });\nconst shuffle = arr => {\n  let currentIndex = arr.length;\n  let tempVal, randIndex;\n\n  while (0 !== currentIndex) {\n    randIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    tempVal = arr[currentIndex];\n    arr[currentIndex] = arr[randIndex];\n    arr[randIndex] = tempVal;\n  }\n\n  return arr;\n}\n\nconst randomColor = () => (\n  '#' + Math.floor(Math.random() * 16777215).toString(16)\n);\n\nconst importAll = r => {\n  let images = {};\n  r.keys().map((item, _) => {\n    images[item.replace(\"./\", \"\")] = r(item);\n  });\n  return images;\n}\n\nconst randomVillager = villagers => {\n  const keys = Object.keys(villagers);\n  const i = Math.round(keys.length * Math.random());\n  const key = keys[i];\n  const name = key.split('.')[0];\n  const src = villagers[keys[i]].default;\n\n  return { name, src, key };\n}\n\nconst formattedTime = time => {\n  const min = (Math.floor(time / 60)).toString();\n  let seconds = (time % 60).toString();\n\n  if (seconds.length < 2) seconds = '0' + seconds;\n\n  return `${min}:${seconds}`;\n}\n\nconst formatNumber = num => (\n  num.toString().replace(/(\\d)(?=(\\d{3})+(?!\\d))/g, '$1,')\n)\n\nconst createElementFromHTML = htmlString => {\n  var div = document.createElement('div');\n  div.innerHTML = htmlString.trim();\n\n  return div.firstChild;\n}\n\n\n\n//# sourceURL=webpack:///./src/utils/utils.js?");
+>>>>>>> 62087907e3e8e6e8ab94d0a99b3f48ddf441dfe5
 
 /***/ })
 
