@@ -1,12 +1,16 @@
 .social-links {
   display: flex;
+  justify-content: space-between;
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  width: 500px;
   align-items: center;
 }
 
-.social-links > a, .social-links > div, .artist-links > a {
+.social-links > div {
+  padding: 8px;
+}
+
+.coder-links > a, .artist-links > a {
   color: #6EC7BB;
   padding: 8px;
 }
