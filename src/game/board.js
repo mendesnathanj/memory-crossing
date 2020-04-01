@@ -82,7 +82,6 @@ class Board {
             this.gameManager.updateScore(0);
             this.gameManager.resetStreak();
             clearInterval(this.timerInterval);
-            console.log('You lose!');
             this.gameOver = true;
             this.gameManager.updateLevel(--this.levelNum);
           }
@@ -106,7 +105,6 @@ class Board {
           this.flippedCount += 2;
           this.gameManager.updateStreak(this.streak);
           if (this.flippedCount === this.size) {
-            console.log('You win!');
             clearInterval(this.timerInterval);
             setTimeout(() => this.gameManager.updateLevel(++this.levelNum, this.score), 1000);
           }

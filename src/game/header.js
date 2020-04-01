@@ -30,7 +30,6 @@ class Header {
 
   incrementLevel() {
     this.level++;
-    console.log(this.level);
     this.levelHtml.innerText = `Level ${this.level}`;
   }
 
