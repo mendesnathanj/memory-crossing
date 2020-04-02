@@ -1,13 +1,19 @@
 import { createElementFromHTML } from '../utils/utils';
 
 class Modal {
+  constructor(isIntro = false) {
+    this.isIntro = isIntro;
+  }
+
   html() {
     const container = document.createElement('div');
-    container.id = 'modal-container';
+    if (this.isIntro) container.id = 'welcome-modal-container';
+    else container.id = 'modal-container';
     container.classList.add('modal-container');
 
     const modal = document.createElement('div');
-    modal.id = 'modal';
+    if (this.isIntro) modal.id = 'welcome-modal';
+    else modal.id = 'modal';
     modal.classList.add('modal');
 
     const content = document.createElement('div');
@@ -19,7 +25,8 @@ class Modal {
     content.appendChild(close);
 
     const header = document.createElement('h1');
-    header.innerText = 'How to Play';
+    if (this.isIntro) header.innerText = 'Welcome to Memory Crossing!';
+    else header.innerText = 'How to Play';
     content.appendChild(header);
 
     const p1 = document.createElement('p');

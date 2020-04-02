@@ -50,6 +50,15 @@ class GameManager {
   }
 
   render() {
+    if (!localStorage.getItem('visited')) {
+      this.root.appendChild(new Modal(true).html());
+      document.querySelector('#welcome-modal-container').classList.add('open');
+    }
+
+
+    localStorage.setItem('visited', true);
+    console.log(!localStorage.getItem('visited'));
+
     this.root.appendChild(new Modal().html());
     this.root.appendChild(this.header.html());
     this.root.appendChild(this.game.html());
